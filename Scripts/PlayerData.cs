@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 
 // Global class to store player data, persists between scenes
 
@@ -21,7 +22,7 @@ public partial class PlayerData : Node
 }
 
 // Used to store the upgrade data in a readable format
-enum UpgradeType
+public enum UpgradeType
 {
 	PopSize,
 	SheetCount,
