@@ -9,13 +9,18 @@ extends Node2D
 @onready var next_shift_btn = get_node("Next Shift")
 
 @onready var shift_time = 10
+@onready var end_shift_flag = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	next_shift_btn.disabled = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if shift_time <= 0: end_shift()
+	if shift_time <= 0: 
+		if !end_shift_flag:
+			end_shift()
+			end_shift_flag = true
+		return
 	shift_time -= delta
 	shift_timer.text = "Shift Timer: " + "%.2f" % shift_time
 
@@ -24,7 +29,7 @@ func end_shift() -> void:
 	enable_start_next_shift_btn()
 
 func enable_start_next_shift_btn() -> void:
-	next_shift_btn.disabled = true
+	next_shift_btn.disabled = false
 	
 func pop_bubble() -> void:
 	if BUBBLES > 0:
@@ -53,3 +58,4 @@ func _on_next_shift_pressed() -> void:
 	shift_time = 10
 	BUBBLES = 0
 	POP_COUNT = 0
+	update_ui()
