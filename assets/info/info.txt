@@ -1,0 +1,2 @@
+info about asset and sprite layout
+game field size - 480 x 270 px ((1920 x 1080) / 4)
