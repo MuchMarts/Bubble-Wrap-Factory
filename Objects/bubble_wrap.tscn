@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs3qfm2sek1fi"]
+
+[ext_resource type="Script" path="res://Scripts/BubbleWrap.cs" id="1_4deid"]
+
+[node name="BubbleWrap" type="Node2D"]
+script = ExtResource("1_4deid")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

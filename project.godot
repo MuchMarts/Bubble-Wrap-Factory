@@ -17,7 +17,7 @@ config/icon="res://GGJAM2025---Bubble-Factory/icon.svg"
 
 [autoload]
 
-PlayerData="*res://Scripts/PlayerData.cs"
+PlayerData="*res://PlayerData.gd"
 
 [dotnet]
 
