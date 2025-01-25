@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="Bubble Wrap Factory"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://GGJAM2025---Bubble-Factory/icon.svg"
+
+[autoload]
+
+PlayerData="*res://Scripts/PlayerData.cs"
 
 [dotnet]
 
